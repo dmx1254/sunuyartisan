@@ -1,0 +1,118 @@
+{
+  "expo": {
+    "name": "Suñuy Artisan",
+    "slug": "sunuyartisan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/pmn/icon.png",
+    "scheme": "sunuy-artisan",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.expo.sunuyartisan",
+      "config": {
+        "googleMapsApiKey": "GOOGLE_API_KEY"
+      },
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/pmn/adaptive-icon.png",
+        "backgroundColor": "#f1f1ef"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "GOOGLE_API_KEY"
+        }
+      },
+      "package": "dev.expo.sunuyartisan",
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/pmn/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/pmn/splash-screen.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#f1f1ef",
+          "enableFullScreenImage_legacy": true
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Rubik-Bold.ttf",
+            "./assets/fonts/Rubik-ExtraBold.ttf",
+            "./assets/fonts/Rubik-Light.ttf",
+            "./assets/fonts/Rubik-Medium.ttf",
+            "./assets/fonts/Rubik-Regular.ttf",
+            "./assets/fonts/Rubik-SemiBold.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "L'application souhaite accéder à vos photos."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notificon.png",
+          "color": "#ffffff"
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+        }
+      ],
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsVersion": "11.0.0"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "35c7ec85-31e3-41e4-a8bb-ec9a0a9dcb2c"
+      }
+    },
+    "owner": "mamadou1254"
+  }
+}
