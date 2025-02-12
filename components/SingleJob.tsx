@@ -45,7 +45,6 @@ const SingleJob = ({
         elevation: 5,
       }}
     >
-      {Platform.OS === "android" && <View className="mt-4" />}
       <TouchableOpacity
         activeOpacity={0.5}
         className="w-full flex-col items-center rounded-2xl"
@@ -62,9 +61,9 @@ const SingleJob = ({
             className="w-32 h-28"
           />
         </View>
-        <View className="p-4">
+        <View className="p-3">
           <Text
-            className={`text-2xl font-rubik-medium text-center ${
+            className={`text-xl font-rubik-medium text-center capitalize ${
               item.slug === categorySelected ? "text-white" : "text-black-300"
             }`}
             numberOfLines={2}

@@ -59,7 +59,7 @@ const CustomInput = ({
             }}
             className="animate-spin"
           >
-            <Ionicons name="reload-circle" size={28} color="#0061FF" />
+            <Ionicons name="reload-circle" size={24} color="#0061FF" />
           </View>
         )}
         {!geolocationLoading && (
@@ -81,7 +81,7 @@ const CustomInput = ({
             }}
             onPress={getCurrentLocation}
           >
-            <Ionicons name="location" size={28} color="#0061FF" />
+            <Ionicons name="location" size={24} color="#0061FF" />
           </TouchableOpacity>
         )}
       </>

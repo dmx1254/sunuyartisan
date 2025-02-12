@@ -71,6 +71,21 @@ const {
   mecaCat,
   metalliqueCat,
   climCat,
+  moulage,
+  tableau,
+  sculpture,
+  serigraphie,
+  poterie,
+  tannage,
+  vannerie,
+  chaudenerie,
+  outillage,
+  pneu,
+  lavageAuto,
+  peintrem,
+  peintreAuto,
+  serrurerie,
+  soinsEtBeaute,
 } = jobsIcones;
 
 export const subCat: ICATEGORY[] = [
@@ -79,16 +94,16 @@ export const subCat: ICATEGORY[] = [
     slug: "tous",
   },
   {
-    name: "Mécanicien",
-    slug: "mecanicien",
+    name: "Mécanique auto",
+    slug: "mecanique-auto",
   },
   {
-    name: "Cordonnier",
-    slug: "cordonnier",
+    name: "Cordonnerie",
+    slug: "cordonnerie",
   },
   {
-    name: "Tailleur",
-    slug: "tailleur",
+    name: "Confection couture",
+    slug: "confection-couture",
   },
   {
     name: "Menuiserie bois",
@@ -103,8 +118,8 @@ export const subCat: ICATEGORY[] = [
     slug: "menuiserie-aluminium",
   },
   {
-    name: "Maroquinier",
-    slug: "maroquinier",
+    name: "Maroquinerie",
+    slug: "maroquinerie",
   },
 ];
 
@@ -129,9 +144,9 @@ export const jobs: JOB[] = [
   },
   {
     id: "WKD75U",
-    name: "Mécanicien",
+    name: "Mécanique auto",
     image: meca,
-    slug: "mecanicien",
+    slug: "mecanique-auto",
   },
   {
     id: "WKE63Z",
@@ -141,15 +156,15 @@ export const jobs: JOB[] = [
   },
   {
     id: "OPT72X",
-    name: "Électricien Auto",
+    name: "Électricité auto",
     image: electAuto,
-    slug: "electricien-auto",
+    slug: "electricite-auto",
   },
   {
     id: "KVY37G",
-    name: "Tôlier-peintre",
+    name: "Carrosserie auto",
     image: peintre,
-    slug: "tolier-peintre",
+    slug: "carrosserie-auto",
   },
 
   {
@@ -166,27 +181,27 @@ export const jobs: JOB[] = [
   },
   {
     id: "QER35P",
-    name: "Tapissier",
+    name: "Tapisserie",
     image: tapis,
-    slug: "tapissier",
+    slug: "tapisserie",
   },
   {
     id: "KIZ82B",
-    name: "Cordonnier",
+    name: "Cordonnerie",
     image: cordo,
-    slug: "cordonnier",
+    slug: "cordonnerie",
   },
   {
     id: "DTY49L",
-    name: "Maroquinier",
+    name: "Maroquinerie",
     image: maroquinier,
-    slug: "maroquinier",
+    slug: "maroquinerie",
   },
   {
     id: "WYU14A",
-    name: "Tailleur",
+    name: "Confection couture",
     image: tailleur,
-    slug: "tailleur",
+    slug: "confection-couture",
   },
   {
     id: "BHO24C",
@@ -202,7 +217,7 @@ export const jobs: JOB[] = [
   },
   {
     id: "DUA19H",
-    name: "Maconnerie",
+    name: "Maçonnerie",
     image: macon,
     slug: "maconnerie",
   },
@@ -214,15 +229,21 @@ export const jobs: JOB[] = [
   },
   {
     id: "WTM43A",
-    name: "Carreleur",
+    name: "Carrelage",
     image: carreleur,
-    slug: "carreleur",
+    slug: "carrelage",
+  },
+  {
+    id: "GDK48T",
+    name: "Soins et beauté",
+    image: soinsEtBeaute,
+    slug: "soins-et-beaute",
   },
   {
     id: "GUZ26V",
-    name: "Charpentier",
+    name: "Charpenterie",
     image: chapelier,
-    slug: "charpentier",
+    slug: "charpenterie",
   },
   {
     id: "WOE98B",
@@ -232,9 +253,9 @@ export const jobs: JOB[] = [
   },
   {
     id: "KLP20D",
-    name: "Bijoutier",
+    name: "Bijouterie",
     image: bijoutier,
-    slug: "bijoutier",
+    slug: "bijouterie",
   },
   {
     id: "GZN47W",
@@ -341,7 +362,7 @@ export const jobs: JOB[] = [
   {
     id: "HQU41K",
     name: "Puisatier",
-    image: amenagInterieur,
+    image: puisatier,
     slug: "puisatier",
   },
   {
@@ -355,6 +376,90 @@ export const jobs: JOB[] = [
     name: "Blanchisserie",
     image: blanchisserie,
     slug: "blanchisserie",
+  },
+  {
+    id: "BAP57V",
+    name: "Moulage",
+    image: moulage,
+    slug: "moulage",
+  },
+  {
+    id: "WMA19N",
+    name: "Production de tableaux d'art",
+    image: tableau,
+    slug: "production-de-tableaux-d-art",
+  },
+  {
+    id: "ZJV62E",
+    name: "Sculpture",
+    image: sculpture,
+    slug: "sculpture",
+  },
+  {
+    id: "FTS53K",
+    name: "Serigraphie",
+    image: serigraphie,
+    slug: "serigraphie",
+  },
+  {
+    id: "KZQ37P",
+    name: "Poterie",
+    image: poterie,
+    slug: "poterie",
+  },
+  {
+    id: "GEX94K",
+    name: "Tannage",
+    image: tannage,
+    slug: "tannage",
+  },
+  {
+    id: "DFW38H",
+    name: "Vannerie",
+    image: vannerie,
+    slug: "vannerie",
+  },
+  {
+    id: "LWV26M",
+    name: "chaudronnerie",
+    image: chaudenerie,
+    slug: "chaudronnerie",
+  },
+  {
+    id: "OWY52B",
+    name: "Outillage agricoles",
+    image: outillage,
+    slug: "outillage-agricoles",
+  },
+  {
+    id: "KLA38C",
+    name: "Vulcanisation pneu",
+    image: pneu,
+    slug: "vulcanisation-pneu",
+  },
+  {
+    id: "JQI38H",
+    name: "Lavage auto",
+    image: lavageAuto,
+    slug: "lavage-auto",
+  },
+  {
+    id: "LVZ17N",
+    name: "Peintre",
+    image: peintrem,
+    slug: "peintre",
+  },
+  {
+    id: "JTS51C",
+    name: "Peinture auto",
+    image: peintreAuto,
+    slug: "peinture-auto",
+  },
+  {
+    id: "OYF62W",
+    name: "Serrurerie",
+    image: serrurerie,
+    slug: "serrurerie",
   },
 ];
 
@@ -398,8 +503,8 @@ export const subJobs: ARTISANMETIER[] = [
   },
   {
     id: "qi61tl",
-    metier: "Maroquinier",
-    slug: "maroquinier",
+    metier: "Maroquinerie",
+    slug: "maroquinerie",
     sousMetier: [
       {
         id: "def456",
@@ -503,8 +608,8 @@ export const subJobs: ARTISANMETIER[] = [
   },
   {
     id: "ld81vu",
-    metier: "Électricien Auto",
-    slug: "electricien-auto",
+    metier: "Électricité auto",
+    slug: "electricite-auto",
     sousMetier: [
       {
         id: "d4e5f6",
@@ -608,8 +713,8 @@ export const subJobs: ARTISANMETIER[] = [
   },
   {
     id: "hr64kp",
-    metier: "Tailleur",
-    slug: "tailleur",
+    metier: "Confection couture",
+    slug: "confection-couture",
     sousMetier: [
       {
         id: "4d5e6f",
@@ -961,8 +1066,8 @@ export const subJobs: ARTISANMETIER[] = [
 
   {
     id: "nh5qp3",
-    metier: "Bijoutier",
-    slug: "bijoutier",
+    metier: "Bijouterie",
+    slug: "bijouterie",
     sousMetier: [
       {
         id: "a1b2c3",
@@ -1033,8 +1138,8 @@ export const subJobs: ARTISANMETIER[] = [
 
   {
     id: "hq53d5",
-    metier: "Mécanicien",
-    slug: "mecanicien",
+    metier: "Mécanique auto",
+    slug: "mecanique-auto",
     sousMetier: [
       {
         id: "d4e5f6",
@@ -1069,8 +1174,8 @@ export const subJobs: ARTISANMETIER[] = [
 
   {
     id: "pq41w3",
-    metier: "Tolier-peintre",
-    slug: "tolier-peintre",
+    metier: "Carrosserie auto",
+    slug: "carrosserie-auto",
     sousMetier: [
       {
         id: "d4e5f6",
@@ -1105,8 +1210,8 @@ export const subJobs: ARTISANMETIER[] = [
 
   {
     id: "gy52q1",
-    metier: "Tapissier",
-    slug: "tapissier",
+    metier: "Tapissirie",
+    slug: "tapisserie",
     sousMetier: [
       {
         id: "def456",
@@ -1141,8 +1246,8 @@ export const subJobs: ARTISANMETIER[] = [
 
   {
     id: "mq27k3",
-    metier: "Cordonnier",
-    slug: "cordonnier",
+    metier: "Cordonnerie",
+    slug: "cordonnerie",
     sousMetier: [
       {
         id: "d4e5f6",
@@ -1285,8 +1390,8 @@ export const subJobs: ARTISANMETIER[] = [
 
   {
     id: "vr53o8",
-    metier: "Carreleur",
-    slug: "carreleur",
+    metier: "Carrelage",
+    slug: "carrelage",
     sousMetier: [
       {
         id: "d4e5f6",
@@ -1321,8 +1426,8 @@ export const subJobs: ARTISANMETIER[] = [
 
   {
     id: "fk92w6",
-    metier: "Charpentier",
-    slug: "charpentier",
+    metier: "Charpenterie",
+    slug: "charpenterie",
     sousMetier: [
       {
         id: "D4E5F6",
@@ -1854,6 +1959,539 @@ export const subJobs: ARTISANMETIER[] = [
       },
     ],
   },
+
+  {
+    id: "mqpw2f",
+    metier: "Moulage",
+    slug: "moulage",
+    sousMetier: [
+      {
+        id: "a1b2c3",
+        metier: "Moulage plastique",
+        slug: "moulage-plastique",
+        description:
+          "Fabrication d'objets en plastique par coulée dans un moule.",
+      },
+      {
+        id: "d4e5f6",
+        metier: "Moulage métallique",
+        slug: "moulage-metallique",
+        description:
+          "Procédé de fabrication d'objets métalliques en versant du métal fondu dans un moule.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Moulage de sable",
+        slug: "moulage-de-sable",
+        description:
+          "Création de moules à partir de sable pour des pièces métalliques.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Moulage en cire perdue",
+        slug: "moulage-en-cire-perdue",
+        description:
+          "Technique de moulage utilisée pour la fabrication de pièces complexes en métal, avec une cire qui est ensuite fondue.",
+      },
+    ],
+  },
+  {
+    id: "gbhq2y",
+    metier: "Serigraphie",
+    slug: "serigraphie",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Sérigraphe textile",
+        slug: "serigraphe-textile",
+        description:
+          "Réalisation d'impressions sur des supports textiles tels que des t-shirts, casquettes, sacs.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Sérigraphe publicitaire",
+        slug: "serigraphe-publicitaire",
+        description:
+          "Impression de logos, slogans ou messages sur des objets publicitaires comme des mugs, stylos, etc.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Sérigraphe industriel",
+        slug: "serigraphe-industriel",
+        description:
+          "Impression en grande quantité pour des produits industriels, souvent avec des encres spéciales.",
+      },
+      {
+        id: "m4n5o6",
+        metier: "Sérigraphe artistique",
+        slug: "serigraphe-artistique",
+        description:
+          "Création d'œuvres d'art imprimées, souvent sur toile ou papier, avec des techniques fines et créatives.",
+      },
+    ],
+  },
+  {
+    id: "jxme9n",
+    metier: "Sculpture",
+    slug: "sculpture",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Sculpteur sur bois",
+        slug: "sculpteur-sur-bois",
+        description:
+          "Création de sculptures artistiques à partir de bois, allant des œuvres décoratives aux sculptures plus élaborées.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Sculpteur sur pierre",
+        slug: "sculpteur-sur-pierre",
+        description:
+          "Travail de la pierre pour créer des sculptures, des statues ou des éléments décoratifs en utilisant des techniques manuelles ou mécaniques.",
+      },
+      {
+        id: "j0k1l2",
+        metier: "Sculpteur sur métal",
+        slug: "sculpteur-sur-metal",
+        description:
+          "Création de sculptures en métal en utilisant diverses techniques telles que le soudage, la découpe et le forgeage.",
+      },
+      {
+        id: "m3n4o5",
+        metier: "Sculpteur sur glace",
+        slug: "sculpteur-sur-glace",
+        description:
+          "Sculpture temporaire en glace, souvent réalisée pour des événements ou des compétitions, nécessitant des outils spécifiques et une précision élevée.",
+      },
+    ],
+  },
+  {
+    id: "jkqo4v",
+    metier: "Production de tableaux d'art",
+    slug: "production-de-tableaux-d-art",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Peintre sur toile",
+        slug: "peintre-sur-toile",
+        description:
+          "Création d'œuvres picturales sur toile, en utilisant différentes techniques de peinture telles que l'huile, l'acrylique ou l'aquarelle.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Sculpteur",
+        slug: "sculpteur",
+        description:
+          "Réalisations artistiques en 3D, principalement en travaillant des matériaux comme le bois, la pierre, ou le métal pour créer des sculptures originales.",
+      },
+      {
+        id: "j0k1l2",
+        metier: "Graveur",
+        slug: "graveur",
+        description:
+          "Art de graver des images, motifs ou textes sur des matériaux tels que le métal, le bois ou la pierre pour produire des impressions.",
+      },
+      {
+        id: "m3n4o5",
+        metier: "Artiste numérique",
+        slug: "artiste-numerique",
+        description:
+          "Création de tableaux d'art à l'aide de logiciels numériques, combinant technologie et créativité pour produire des œuvres contemporaines.",
+      },
+    ],
+  },
+  {
+    id: "jkqx9y",
+    metier: "Poterie",
+    slug: "poterie",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Potière artisanale",
+        slug: "potiere-artisanale",
+        description:
+          "Création de pièces uniques en argile à la main, souvent décorées ou peintes.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Céramiste",
+        slug: "ceramiste",
+        description:
+          "Fabrication de céramiques fines, comprenant des objets utilitaires et décoratifs.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Modelage d'argile",
+        slug: "modelage-argile",
+        description:
+          "Technique qui consiste à façonner l'argile pour créer des sculptures et des objets.",
+      },
+      {
+        id: "m4n5o6",
+        metier: "Poterie utilitaire",
+        slug: "poterie-utilitaire",
+        description:
+          "Fabrication d'objets en terre cuite utilisés dans la vie quotidienne, comme des tasses, pots et vases.",
+      },
+    ],
+  },
+  {
+    id: "uhwk3o",
+    metier: "Tannage",
+    slug: "tannage",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Tanneur traditionnel",
+        slug: "tanneur-traditionnel",
+        description:
+          "Spécialisé dans le traitement manuel des peaux pour produire du cuir de qualité.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Tanneur industriel",
+        slug: "tanneur-industriel",
+        description:
+          "Utilise des machines et des procédés modernes pour transformer les peaux en cuir.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Tanneur spécialisé en cuir exotique",
+        slug: "tanneur-specialise-en-cuir-exotique",
+        description:
+          "Travaille sur des peaux rares comme celles de crocodiles, serpents ou autruches.",
+      },
+      {
+        id: "m4n5o6",
+        metier: "Tanneur-teinturier",
+        slug: "tanneur-teinturier",
+        description:
+          "Expert dans la coloration et la finition des cuirs pour des applications spécifiques.",
+      },
+    ],
+  },
+  {
+    id: "hqmx8j",
+    metier: "Vannerie",
+    slug: "vannerie",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Fabrication de paniers",
+        slug: "fabrication-de-paniers",
+        description:
+          "Conception et tressage de paniers en matériaux naturels comme l'osier ou le rotin.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Création de chapeaux",
+        slug: "creation-de-chapeaux",
+        description:
+          "Réalisation artisanale de chapeaux en fibres végétales tressées.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Production de nattes",
+        slug: "production-de-nattes",
+        description:
+          "Fabrication de nattes utilisées pour la décoration ou comme tapis.",
+      },
+      {
+        id: "m4n5o6",
+        metier: "Confection d'articles décoratifs",
+        slug: "confection-d-articles-decoratifs",
+        description:
+          "Création d'objets décoratifs comme des corbeilles, vases ou plateaux en vannerie.",
+      },
+    ],
+  },
+
+  {
+    id: "lwzm7g",
+    metier: "Chaudronnerie",
+    slug: "chaudronnerie",
+    sousMetier: [
+      {
+        id: "def456",
+        metier: "Chaudronnier soudeur",
+        slug: "chaudronnier-soudeur",
+        description:
+          "Spécialiste dans l'assemblage de pièces métalliques par soudure, utilisé pour les structures et équipements.",
+      },
+      {
+        id: "ghi789",
+        metier: "Chaudronnier industriel",
+        slug: "chaudronnier-industriel",
+        description:
+          "Conçoit et fabrique des pièces métalliques complexes destinées aux secteurs industriels.",
+      },
+      {
+        id: "jkl012",
+        metier: "Monteur en chaudronnerie",
+        slug: "monteur-en-chaudronnerie",
+        description:
+          "Assemble sur site les pièces de chaudronnerie pour créer des structures ou équipements finis.",
+      },
+      {
+        id: "mno345",
+        metier: "Chaudronnier d'art",
+        slug: "chaudronnier-d-art",
+        description:
+          "Travaille le métal pour créer des pièces décoratives ou artistiques, alliant savoir-faire et esthétique.",
+      },
+    ],
+  },
+
+  {
+    id: "ltw43u",
+    metier: "Outillage agricoles",
+    slug: "outillage-agricoles",
+    sousMetier: [
+      {
+        id: "def456",
+        metier: "Réparation de matériel agricole",
+        slug: "reparation-de-materiel-agricole",
+        description:
+          "Maintenance et réparation de machines agricoles comme les tracteurs et moissonneuses-batteuses.",
+      },
+      {
+        id: "ghi789",
+        metier: "Fabrication d’outils agricoles",
+        slug: "fabrication-d-outils-agricoles",
+        description:
+          "Conception et production d’outils manuels tels que houes, pelles et râteaux.",
+      },
+      {
+        id: "jkl012",
+        metier: "Vente d’équipements agricoles",
+        slug: "vente-d-equipements-agricoles",
+        description:
+          "Distribution de matériels et équipements agricoles modernes pour les exploitations.",
+      },
+      {
+        id: "mno345",
+        metier: "Installation de systèmes d’irrigation",
+        slug: "installation-de-systemes-d-irrigation",
+        description:
+          "Mise en place de solutions d’irrigation pour améliorer la gestion de l’eau dans les cultures.",
+      },
+    ],
+  },
+
+  {
+    id: "lwy19r",
+    metier: "Vulcanisation pneu",
+    slug: "vulcanisation-pneu",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Réparation de crevaisons",
+        slug: "reparation-de-crevaisons",
+        description:
+          "Service de réparation rapide et efficace des crevaisons sur tous types de pneus.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Changement de pneus",
+        slug: "changement-de-pneus",
+        description:
+          "Remplacement professionnel de pneus usés ou endommagés pour une conduite sécurisée.",
+      },
+      {
+        id: "j0k1l2",
+        metier: "Équilibrage de roues",
+        slug: "equilibrage-de-roues",
+        description:
+          "Équilibrage des roues pour réduire les vibrations et améliorer la stabilité du véhicule.",
+      },
+      {
+        id: "m3n4o5",
+        metier: "Rechapage de pneus",
+        slug: "rechapage-de-pneus",
+        description:
+          "Procédé de renouvellement de la bande de roulement pour prolonger la durée de vie des pneus.",
+      },
+    ],
+  },
+
+  {
+    id: "mqu18r",
+    metier: "Lavage Auto",
+    slug: "lavage-auto",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Nettoyage intérieur",
+        slug: "nettoyage-interieur",
+        description:
+          "Service dédié au nettoyage complet de l'intérieur des véhicules, incluant tapis, sièges et tableaux de bord.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Nettoyage extérieur",
+        slug: "nettoyage-exterieur",
+        description:
+          "Lavage spécialisé de la carrosserie, des vitres et des roues pour une finition impeccable.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Polissage de carrosserie",
+        slug: "polissage-carrosserie",
+        description:
+          "Service de polissage pour restaurer l'éclat et éliminer les micro-rayures de la peinture.",
+      },
+      {
+        id: "m4n5o6",
+        metier: "Nettoyage écologique",
+        slug: "nettoyage-ecologique",
+        description:
+          "Lavage utilisant des produits respectueux de l'environnement et une consommation minimale d'eau.",
+      },
+    ],
+  },
+
+  {
+    id: "lyh49k",
+    metier: "Peintre",
+    slug: "peintre",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Peintre en bâtiment",
+        slug: "peintre-en-batiment",
+        description:
+          "Spécialiste des travaux de peinture intérieure et extérieure pour les bâtiments.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Peintre décorateur",
+        slug: "peintre-decorateur",
+        description:
+          "Expert en création d'effets décoratifs et de finitions esthétiques sur les murs et plafonds.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Peintre industriel",
+        slug: "peintre-industriel",
+        description:
+          "Professionnel appliquant des revêtements protecteurs sur des structures métalliques et équipements.",
+      },
+      {
+        id: "m4n5o6",
+        metier: "Peintre en carrosserie",
+        slug: "peintre-en-carrosserie",
+        description:
+          "Spécialisé dans la peinture et la retouche de véhicules pour leur restauration ou personnalisation.",
+      },
+    ],
+  },
+
+  {
+    id: "qwb73e",
+    metier: "Peinture Auto",
+    slug: "peinture-auto",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Peinture personnalisée",
+        slug: "peinture-personnalisee",
+        description:
+          "Réalisation de peintures uniques pour personnaliser les véhicules avec des motifs, couleurs et finitions spéciales.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Réparation de peinture",
+        slug: "reparation-de-peinture",
+        description:
+          "Correction des éraflures, rayures et dommages mineurs sur la carrosserie d'un véhicule.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Rénovation complète de peinture",
+        slug: "renovation-complete-de-peinture",
+        description:
+          "Refaire entièrement la peinture d’un véhicule pour lui redonner un aspect neuf.",
+      },
+      {
+        id: "m4n5o6",
+        metier: "Application de vernis protecteur",
+        slug: "application-de-vernis-protecteur",
+        description:
+          "Ajout d'un vernis pour protéger la peinture des rayons UV, des intempéries et des rayures.",
+      },
+    ],
+  },
+
+  {
+    id: "jxm5o6",
+    metier: "Serrurerie",
+    slug: "serrurerie",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Serrurier dépanneur",
+        slug: "serrurier-depanneur",
+        description:
+          "Spécialiste des interventions rapides pour ouvrir ou réparer des serrures bloquées ou endommagées.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Serrurier métallier",
+        slug: "serrurier-metallier",
+        description:
+          "Conçoit, fabrique et installe des structures métalliques comme les portes, portails et grilles.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Serrurier installateur",
+        slug: "serrurier-installateur",
+        description:
+          "Expert dans la pose de serrures et systèmes de sécurité, y compris les serrures électroniques.",
+      },
+      {
+        id: "m4n5o6",
+        metier: "Serrurier en sécurité",
+        slug: "serrurier-en-securite",
+        description:
+          "Spécialisé dans les solutions avancées de sécurité comme les coffres-forts et contrôles d’accès.",
+      },
+    ],
+  },
+
+  {
+    id: "lqi37g",
+    metier: "Soins et beauté",
+    slug: "soins-et-beaute",
+    sousMetier: [
+      {
+        id: "d4e5f6",
+        metier: "Coiffure",
+        slug: "coiffure",
+        description:
+          "Services de coupe, coloration et coiffage pour hommes et femmes.",
+      },
+      {
+        id: "g7h8i9",
+        metier: "Esthétique",
+        slug: "esthetique",
+        description:
+          "Soins du visage, épilation, maquillage et beauté des ongles.",
+      },
+      {
+        id: "j1k2l3",
+        metier: "Massage bien-être",
+        slug: "massage-bien-etre",
+        description: "Massages relaxants, thérapeutiques et soins corporels.",
+      },
+      {
+        id: "m4n5o6",
+        metier: "Prothésiste ongulaire",
+        slug: "prothesiste-ongulaire",
+        description:
+          "Pose d’ongles en gel, résine, nail art et soins des mains.",
+      },
+    ],
+  },
 ];
 
 export const availabilityOptions = [
@@ -1921,9 +2559,9 @@ export const categories: JOB[] = [
   },
   {
     id: "HS7DE4",
-    name: "Mécanicien",
+    name: "Mécanique auto",
     image: mecaCat,
-    slug: "mecanicien",
+    slug: "mecanique-auto",
   },
   {
     id: "RA2L3Q",
@@ -1939,9 +2577,9 @@ export const categories: JOB[] = [
   },
   {
     id: "DG14J9",
-    name: "Menuiserie",
+    name: "Menuiserie bois",
     image: menuisierCat,
-    slug: "menuiserie",
+    slug: "menuiserie-bois",
   },
 
   {

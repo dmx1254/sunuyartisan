@@ -77,7 +77,7 @@ const ChooseSignUp = () => {
               />
               <View className="p-4">
                 <Text className="text-center font-rubik-medium text-xl mb-4">
-                  S'inscrire en tant que particulier
+                  Particulier
                 </Text>
                 <TouchableOpacity
                   className="bg-primary-300 rounded-lg p-3"
@@ -114,7 +114,7 @@ const ChooseSignUp = () => {
               />
               <View className="p-4">
                 <Text className="text-center font-rubik-medium text-xl mb-4">
-                  S'inscrire en tant qu'administration
+                  Administration
                 </Text>
                 <TouchableOpacity
                   className="bg-primary-300 rounded-lg p-3"

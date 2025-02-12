@@ -133,7 +133,7 @@ export const Card = ({ item, reviewLength }: CardItem) => {
         </View>
 
         {/* Contenu */}
-        <View className="p-4">
+        <View className="px-2 py-4">
           {/* En-tête */}
           <View className="flex-col items-start">
             <Text className="text-sm font-rubik-bold text-black-300 flex-1">
@@ -168,7 +168,7 @@ export const Card = ({ item, reviewLength }: CardItem) => {
             </View>
           </View>
           <View className="space-y-1.5">
-            <Text className="text-sm font-rubik-bold text-primary-300 flex-1">
+            <Text className="text-sm font-rubik-bold text-primary-300 flex-1 mx-1">
               à &nbsp;{distance?.toFixed(1)} km de vous
             </Text>
           </View>

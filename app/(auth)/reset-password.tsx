@@ -70,7 +70,6 @@ const ResetPasseword = () => {
       className="flex-1"
       keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
     >
-      {Platform.OS === "android" && <View className="mt-4" />}
       <SafeAreaView
         className="flex-1"
         style={{

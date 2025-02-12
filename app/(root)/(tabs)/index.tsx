@@ -1,28 +1,19 @@
 import {
   View,
-  Text,
   SafeAreaView,
-  TouchableOpacity,
-  FlatList,
-  Image,
   Platform,
+  TouchableOpacity,
+  Text,
 } from "react-native";
-import React, { useEffect, useState } from "react";
-import { Link, RelativePathString, useRouter } from "expo-router";
+import React, { useEffect } from "react";
 import { useAuth } from "@/components/Auth";
 import { StatusBar } from "expo-status-bar";
 
-import icons from "@/app/lib/constants/images";
-import Search from "@/components/Search";
-import jobs, { categories } from "@/app/lib/constants/data";
-import { Card, FeaturedCard } from "@/components/Card";
-import NoResults from "@/components/NoResults";
-import Filters from "@/components/Filters";
-import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/app/lib/supabase";
 import FeaturedArtisans from "@/components/FeaturedArtisans";
 import { useNotification } from "@/context/NotificationContext";
 import { sendPushNotification } from "@/services/notifications";
+import { useRouter } from "expo-router";
 
 // import { Audio } from "expo-av";
 // import { Sound } from "expo-av/build/Audio";
@@ -30,6 +21,7 @@ import { sendPushNotification } from "@/services/notifications";
 const Home = () => {
   const { notification, expoPushToken, error } = useNotification();
   const { user } = useAuth();
+  const router = useRouter();
 
   // const [sound, setSound] = useState<Sound>();
 
@@ -176,7 +168,7 @@ const Home = () => {
 
   return (
     <SafeAreaView className="h-full bg-white">
-      {Platform.OS === "android" && <View className="mt-4" />}
+      {Platform.OS === "android" && <View className="mt-5" />}
       <StatusBar style="dark" />
       <FeaturedArtisans />
     </SafeAreaView>

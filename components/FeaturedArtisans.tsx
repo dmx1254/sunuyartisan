@@ -285,6 +285,13 @@ const FeaturedArtisans = () => {
         </TouchableOpacity>
       </View>
       <Filters onSelectCategory={(val) => setSelectedCategory(val)} />
+      {!loading && artisans.length === 0 && (
+        <View className="flex items-center justify-center mt-6">
+          <Text className="text-xl font-rubik-semibold">
+            Aucun résultat trouvé
+          </Text>
+        </View>
+      )}
     </View>
   );
 

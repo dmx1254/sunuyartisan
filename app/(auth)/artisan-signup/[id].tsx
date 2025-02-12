@@ -122,9 +122,12 @@ const ArtisanSignUp = () => {
         // });
         setShowOtp(true);
       }
-
-      if (error.toString().includes("Cet utilisateur est déjà enregistré")) {
-        setPhoneError("Cet utilisateur est déjà enregistré");
+      if (error) {
+        if (error.toString().includes("Cet utilisateur est déjà enregistré")) {
+          setPhoneError("Cet utilisateur est déjà enregistré");
+        } else {
+          setPhoneError("");
+        }
       }
 
       // console.log(formData);

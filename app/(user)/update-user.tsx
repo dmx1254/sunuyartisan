@@ -8,6 +8,7 @@ import {
   Alert,
   KeyboardAvoidingView,
   Platform,
+  StatusBar,
 } from "react-native";
 import { Redirect, useLocalSearchParams, useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
@@ -208,16 +209,20 @@ const UpdateUser = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       {Platform.OS === "android" && <View className="mt-4" />}
+      <StatusBar barStyle="dark-content" />
       <Toast />
       {/* Header */}
-      <View className="px-6 py-4 border-b border-gray-100">
+      <View className="px-6 pb-4 border-b pt-8 border-gray-100">
         <TouchableOpacity
-          onPress={() => router.back()}
-          className="absolute left-6 top-4 z-10"
+          onPress={() => router.push("/(root)/(tabs)")}
+          className="absolute left-6 z-10"
+          style={{
+            top: 26,
+          }}
         >
           <Ionicons name="arrow-back" size={24} color="#0061FF" />
         </TouchableOpacity>
-        <Text className="text-2xl font-rubik-bold text-center text-black-300">
+        <Text className="text-xl font-rubik-bold text-center text-black-300">
           Information de profile
         </Text>
       </View>
@@ -293,20 +298,6 @@ const UpdateUser = () => {
           {currentStep === 4 && <LastStep formData={formData} />}
         </ScrollView>
       </KeyboardAvoidingView>
-      {/* <TouchableOpacity
-        className="self-center mb-8"
-        style={{
-          opacity: currentStep < 2 ? 0.5 : 1,
-        }}
-        disabled={currentStep < 2}
-        onPress={() =>
-          setCurrentStep((prevCurrentState) => prevCurrentState - 1)
-        }
-      >
-        <Text className="text-xl font-rubik-medium rounded-2xl px-4 py-2 bg-primary-900 text-white">
-          Retour
-        </Text>
-      </TouchableOpacity> */}
 
       <View className="p-6 border-t border-gray-100">
         <TouchableOpacity

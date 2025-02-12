@@ -40,5 +40,8 @@ yarn-error.*
 
 app-example
 
+# eas template
+app.template.json
+
 /ios
 /android

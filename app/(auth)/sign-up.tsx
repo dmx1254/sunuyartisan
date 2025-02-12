@@ -92,7 +92,7 @@ const SignUp = () => {
               />
               <View className="px-4 py-2">
                 <Text className="text-center font-rubik-medium text-xl mb-4">
-                  S'inscrire en tant que client
+                  Client
                 </Text>
                 <TouchableOpacity
                   className="bg-primary-300 rounded-lg p-3"
@@ -125,7 +125,7 @@ const SignUp = () => {
               />
               <View className="px-4 py-2">
                 <Text className="text-center font-rubik-medium text-xl mb-4">
-                  S'inscrire en tant qu'artisan
+                  Artisan
                 </Text>
                 <TouchableOpacity
                   className="bg-primary-300 rounded-lg p-3"

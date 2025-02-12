@@ -221,7 +221,7 @@ const ArtisanDetails = () => {
               <Text className="text-lg">Vérifié</Text>
             </View>
           )}
-          <View className="flex flex-col items-start gap-4 px-4 py-2">
+          <View className="flex flex-col items-start gap-2 px-4 py-2">
             <View className="flex-row items-center justify-center">
               <Text className="text-lg font-rubik-bold">
                 {artisan.user.fullname}
@@ -239,7 +239,9 @@ const ArtisanDetails = () => {
               </View>
             </View>
             <Text className="text-lg font-rubik-medium capitalize">
-              {artisan.category} • {artisan.sub_category}
+              {artisan.category}{" "}
+              <Text className="mx-4 font-rubik-light text-lg">-</Text>{" "}
+              {artisan.sub_category}
             </Text>
           </View>
         </View>
@@ -248,7 +250,7 @@ const ArtisanDetails = () => {
         <View className="w-full flex-row items-center justify-between gap-4 p-4">
           {distance && (
             <View className="flex-row items-center gap-2 py-2">
-              <Ionicons name="location" size={20} color="#0061FF" />
+              <Ionicons name="location" size={18} color="#0061FF" />
               <Text className="text-sm font-rubik-semibold text-primary-300">
                 À {distance.toFixed(1)} km de vous
               </Text>

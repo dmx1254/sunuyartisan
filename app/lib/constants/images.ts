@@ -43,7 +43,7 @@ import techSolaire from "@/assets/images/metier/technicien-solaire.png";
 import transport from "@/assets/images/metier/transport.png";
 import transformArtisanal from "@/assets/images/metier/transformation-artisanal.png";
 import amenagInterieur from "@/assets/images/metier/amenagement-interieur.png";
-import puisatier from "@/assets/images/metier/puitiers.png";
+import puisatier from "@/assets/images/metier/puisatier.png";
 import nettoyageLocaux from "@/assets/images/metier/nettoyage.png";
 import blanchisserie from "@/assets/images/metier/blanchisserie.png";
 import home from "@/assets/icons/home.png";
@@ -83,6 +83,26 @@ import metalliqueCat from "@/assets/images/categorie/metallique.png";
 import climCat from "@/assets/images/categorie/clim.png";
 import star from "@/assets/icons/star.png";
 import location from "@/assets/icons/location.png";
+
+import moulage from "@/assets/images/metier/moulage.png";
+import tableau from "@/assets/images/metier/tableau.png";
+import sculpture from "@/assets/images/metier/sculture.png";
+import serigraphie from "@/assets/images/metier/serigraphie.png";
+
+import poterie from "@/assets/images/metier/poterie.png";
+import tannage from "@/assets/images/metier/tannage.png";
+import vannerie from "@/assets/images/metier/vannerie.png";
+
+import chaudenerie from "@/assets/images/metier/chaudenerie.png";
+import outillage from "@/assets/images/metier/outillage.png";
+import pneu from "@/assets/images/metier/pneu.png";
+
+import lavageAuto from "@/assets/images/metier/lavage-auto.png";
+import peintrem from "@/assets/images/metier/peintre.png";
+import peintreAuto from "@/assets/images/metier/peintre-auto.png";
+import serrurerie from "@/assets/images/metier/serrurerie.png";
+
+import soinsEtBeaute from "@/assets/images/metier/soins-et-beaute.png";
 
 export default {
   alum,
@@ -170,4 +190,19 @@ export default {
   location,
   chat,
   phone,
+  moulage,
+  tableau,
+  sculpture,
+  serigraphie,
+  poterie,
+  tannage,
+  vannerie,
+  chaudenerie,
+  outillage,
+  pneu,
+  lavageAuto,
+  peintrem,
+  peintreAuto,
+  serrurerie,
+  soinsEtBeaute,
 };

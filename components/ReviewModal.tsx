@@ -87,7 +87,7 @@ const ReviewModal = ({
                     }
                     className="text-lg font-rubik-medium placeholder:text-gray-300"
                     style={{
-                      minHeight: 120,
+                      minHeight: 80,
                     }}
                   />
                 </View>

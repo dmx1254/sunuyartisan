@@ -45,7 +45,6 @@ const ResetPasswordPage = () => {
       keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
     >
       <StatusBar backgroundColor="#000" hidden={false} />
-      {Platform.OS === "android" && <View className="mt-4" />}
       <SafeAreaView className="flex-1">
         <TouchableOpacity
           activeOpacity={0.5}

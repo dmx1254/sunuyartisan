@@ -202,7 +202,11 @@ const profile = () => {
   }, [user]);
 
   if (isLoading) {
-    return <ProfileSkeleton />;
+    return (
+      <View className="flex-1 items-center justify-center">
+        <ActivityIndicator size={24} color="#0061FF" />
+      </View>
+    );
   }
 
   return (

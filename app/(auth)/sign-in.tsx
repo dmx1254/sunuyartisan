@@ -120,7 +120,6 @@ const signIn = () => {
       className="flex-1"
       keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
     >
-      {Platform.OS === "android" && <View className="mt-4" />}
       <SafeAreaView className="flex-1 flex-col items-center bg-backgr-100">
         <View className="w-full px-6 py-4 border-b border-gray-300">
           <TouchableOpacity
