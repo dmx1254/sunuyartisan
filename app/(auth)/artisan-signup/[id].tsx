@@ -209,7 +209,7 @@ const ArtisanSignUp = () => {
                 <View
                   className="absolute left-4"
                   style={{
-                    top: 45,
+                    top: 46,
                   }}
                 >
                   <Ionicons name="person-outline" size={20} color="#9ca3af" />
@@ -299,7 +299,7 @@ const ArtisanSignUp = () => {
                 <View
                   className="absolute left-4"
                   style={{
-                    top: 47,
+                    top: 50,
                   }}
                 >
                   <Ionicons
@@ -344,7 +344,7 @@ const ArtisanSignUp = () => {
                 <View
                   className="absolute left-4"
                   style={{
-                    top: 47,
+                    top: 49,
                   }}
                 >
                   <Ionicons

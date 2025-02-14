@@ -211,7 +211,7 @@ const profile = () => {
 
   return (
     <SafeAreaView className="h-full bg-white">
-      {Platform.OS === "android" && <View className="mt-4" />}
+      {Platform.OS === "android" && <View className="mt-5" />}
       <StatusBar style="dark" />
       <ScrollView
         showsVerticalScrollIndicator={false}

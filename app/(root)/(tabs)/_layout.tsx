@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { Image, ImageSourcePropType, Text, View } from "react-native";
+import { Image, ImageSourcePropType, Platform, Text, View } from "react-native";
 
 import icons from "@/app/lib/constants/images";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -45,9 +45,9 @@ const TabsLayout = () => {
           position: "absolute",
           borderTopColor: "#0061FF1A",
           borderTopWidth: 1,
-          minHeight: 70,
+          minHeight: Platform.OS === "android" ? 70 : 50,
           paddingBottom: insets.bottom,
-          height: 70 + insets.bottom,
+          height: Platform.OS === "android" ? 70 : 50 + insets.bottom,
         },
       }}
     >

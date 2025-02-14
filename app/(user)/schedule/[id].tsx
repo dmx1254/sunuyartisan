@@ -133,7 +133,7 @@ const ScheduleDetails = () => {
               : data.userlocation;
 
           const response = await fetch(
-            `https://maps.googleapis.com/maps/api/directions/json?origin=${data.artisanLocation.latitude},${data.artisanLocation.longitude}&destination=${userLocation.latitude},${userLocation.longitude}&key=${process.env.EXPO_PUBLIC_GOOGLE8MAPS_API_KEY}`
+            `https://maps.googleapis.com/maps/api/directions/json?origin=${data.artisanLocation.latitude},${data.artisanLocation.longitude}&destination=${userLocation.latitude},${userLocation.longitude}&key=${process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY}`
           );
 
           const result = await response.json();

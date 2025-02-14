@@ -7,6 +7,7 @@ import {
   Text,
   ActivityIndicator,
   RefreshControl,
+  Platform,
 } from "react-native";
 import { RelativePathString, useRouter } from "expo-router";
 import { ArtisanDetail } from "@/types";
@@ -216,7 +217,11 @@ const FeaturedArtisans = () => {
 
   const ListHeader = () => (
     <View className="px-5">
-      <View className="flex flex-row items-center justify-between mt-5">
+      <View
+        className={`flex flex-row items-center justify-between ${
+          Platform.OS === "android" ? "mt-5" : "mt-3"
+        }`}
+      >
         <View className="flex flex-row">
           <Image
             source={
