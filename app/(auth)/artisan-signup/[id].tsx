@@ -10,6 +10,8 @@ import {
   KeyboardAvoidingView,
   Platform,
   useWindowDimensions,
+  Linking,
+  Pressable,
 } from "react-native";
 import { Redirect, useLocalSearchParams, useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
@@ -18,6 +20,7 @@ import { useAuth } from "@/components/Auth";
 import Feather from "@expo/vector-icons/Feather";
 import { CountryPicker, CountryItem } from "react-native-country-codes-picker";
 import OtpVerification from "@/components/OtpVerification";
+import { StatusBar } from "expo-status-bar";
 
 const ArtisanSignUp = () => {
   const { isSignUpLoading, signUp, user } = useAuth();
@@ -135,6 +138,10 @@ const ArtisanSignUp = () => {
     }
   };
 
+  const openWebsite = (url: string) => {
+    Linking.openURL(url);
+  };
+
   useEffect(() => {
     if (user) {
       return router.replace("/(root)/(tabs)");
@@ -143,6 +150,7 @@ const ArtisanSignUp = () => {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
+      <StatusBar style="dark" />
       {Platform.OS === "android" && <View className="mt-4" />}
       {/* Header */}
       <View className="px-6 py-4 border-b border-gray-300">
@@ -152,7 +160,7 @@ const ArtisanSignUp = () => {
         >
           <Ionicons name="arrow-back" size={24} color="#0061FF" />
         </TouchableOpacity>
-        <Text className="text-xl font-rubik-bold text-center text-black-300">
+        <Text className="text-2xl font-rubik-bold text-center text-black-300">
           Inscription {id === "ARTISAN" && "Artisan"}
           {id === "PARTICULIER" && "du particulier"}
           {id === "ADMINISTRATION" && "administration"}
@@ -166,7 +174,6 @@ const ArtisanSignUp = () => {
       >
         <ScrollView
           contentContainerStyle={{
-            flex: 1,
             alignItems: "center",
             justifyContent: "center",
             paddingBottom: 20,
@@ -326,7 +333,7 @@ const ArtisanSignUp = () => {
                 )}
               </View>
 
-              <View className="relative mb-6">
+              <View className="relative mb-4">
                 <Text className="text-black-200 text-lg mb-2 font-rubik-medium">
                   Confirmer mot de passe
                 </Text>
@@ -372,7 +379,7 @@ const ArtisanSignUp = () => {
               </View>
               <TouchableOpacity
                 onPress={handleNext}
-                className="bg-primary-300 p-4 rounded-full my-6"
+                className="bg-primary-300 p-4 rounded-full mt-6 mb-4"
                 disabled={
                   isSignUpLoading ||
                   !formData.password ||
@@ -401,6 +408,26 @@ const ArtisanSignUp = () => {
                   </View>
                 )}
               </TouchableOpacity>
+            </View>
+          )}
+          {!showOtp && (
+            <View className="w-full px-4 pt-2">
+              <Text className="flex-row text-center font-rubik-light text-base">
+                En s'inscrivant, vous acceptez nos{" "}
+                <Text
+                  className="text-primary-300 font-rubik-semibold inline"
+                  onPress={() => openWebsite("https://pmn.sn/cgu")}
+                >
+                  termes et conditions{" "}
+                </Text>
+                et nos{" "}
+                <Text
+                  className="text-primary-300 font-rubik-semibold inline"
+                  onPress={() => openWebsite("https://pmn.sn/cgu")}
+                >
+                  politiques de confidentialité
+                </Text>
+              </Text>
             </View>
           )}
         </ScrollView>

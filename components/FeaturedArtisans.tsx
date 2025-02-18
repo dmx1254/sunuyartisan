@@ -219,7 +219,7 @@ const FeaturedArtisans = () => {
     <View className="px-5">
       <View
         className={`flex flex-row items-center justify-between ${
-          Platform.OS === "android" ? "mt-5" : "mt-3"
+          Platform.OS === "android" ? "mt-5" : "mt-2"
         }`}
       >
         <View className="flex flex-row">
@@ -289,7 +289,10 @@ const FeaturedArtisans = () => {
           </Text>
         </TouchableOpacity>
       </View>
-      <Filters onSelectCategory={(val) => setSelectedCategory(val)} />
+      <Filters
+        testID="filters"
+        onSelectCategory={(val) => setSelectedCategory(val)}
+      />
       {!loading && artisans.length === 0 && (
         <View className="flex items-center justify-center mt-6">
           <Text className="text-xl font-rubik-semibold">
@@ -314,6 +317,7 @@ const FeaturedArtisans = () => {
       key={"two-columns"}
       data={artisans}
       numColumns={2}
+      testID="artisans-list"
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
         <Card

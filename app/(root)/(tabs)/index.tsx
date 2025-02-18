@@ -21,25 +21,6 @@ import { useRouter } from "expo-router";
 const Home = () => {
   const { notification, expoPushToken, error } = useNotification();
   const { user } = useAuth();
-  const router = useRouter();
-
-  // const [sound, setSound] = useState<Sound>();
-
-  // console.log(user);
-
-  // console.log("......................................")
-  // console.log(session)
-
-  // async function playNotificationSound() {
-  //   // console.log("Loading Sound");
-  //   const { sound } = await Audio.Sound.createAsync(
-  //     require("@/assets/sounds/notification.mp3")
-  //   );
-  //   // setSound(sound);
-
-  //   // console.log("Playing Sound");
-  //   await sound.playAsync();
-  // }
 
   useEffect(() => {
     if (!user?.id) return;

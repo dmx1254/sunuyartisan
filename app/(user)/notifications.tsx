@@ -128,6 +128,7 @@ const Notifications = () => {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [sound, setSound] = useState<Sound>();
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const { user } = useAuth();
   const router = useRouter();
 
@@ -182,6 +183,18 @@ const Notifications = () => {
       setRefreshing(false);
     }
   };
+
+  useEffect(() => {
+    // Vérifie l'état de l'authentification après un court délai
+    const checkAuth = setTimeout(() => {
+      if (!user) {
+        router.replace("/(auth)/sign-in");
+      }
+      setIsLoading(false);
+    }, 100);
+
+    return () => clearTimeout(checkAuth);
+  }, [user]);
 
   useEffect(() => {
     fetchNotifications();
@@ -365,6 +378,8 @@ const Notifications = () => {
       }: ${appointment.service}`;
     }
 
+    // console.log(item)
+
     return (
       <TouchableOpacity
         onPress={() =>
@@ -384,7 +399,7 @@ const Notifications = () => {
           />
         )}
 
-        <View className="flex-1">
+        <View className="relative flex-1">
           <View className="flex-row items-center justify-between">
             <Text
               numberOfLines={1}
@@ -402,6 +417,20 @@ const Notifications = () => {
           >
             {subtitle}
           </Text>
+          {!(item as Message).read && isMessage && (
+            <View
+              style={{
+                position: "absolute",
+                borderRadius: 4,
+                width: 8,
+                height: 8,
+                top: 0,
+                right: -2,
+                backgroundColor: "#0061FF",
+                transform: [{ translateY: -6 }],
+              }}
+            />
+          )}
         </View>
       </TouchableOpacity>
     );
@@ -415,11 +444,13 @@ const Notifications = () => {
     );
   }
 
-  // useEffect(() => {
-  //   if (!user) {
-  //     return router.replace("/(auth)/sign-in");
-  //   }
-  // });
+  if (isLoading) {
+    return (
+      <View className="flex-1 items-center justify-center">
+        <ActivityIndicator size={24} color="#0061FF" />
+      </View>
+    );
+  }
 
   return (
     <View className="flex-1 bg-white">

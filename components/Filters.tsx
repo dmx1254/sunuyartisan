@@ -7,6 +7,7 @@ import { ICATEGORY } from "@/types";
 
 interface FiltersProps {
   onSelectCategory: (category: string) => void;
+  testID?: string;
 }
 
 const Filters = ({ onSelectCategory }: FiltersProps) => {

@@ -117,7 +117,7 @@ const signIn = () => {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
-      className="flex-1"
+      className="flex-1 bg-backgr-100"
       keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
     >
       <SafeAreaView className="flex-1 flex-col items-center bg-backgr-100">
@@ -186,7 +186,7 @@ const signIn = () => {
                       setPhone(text);
                     }}
                     style={{
-                      lineHeight: 26,
+                      lineHeight: 20,
                     }}
                   />
                 </View>

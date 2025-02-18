@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useFonts } from "expo-font";
-import { SplashScreen, Stack } from "expo-router";
+import { SplashScreen, Stack, useRouter } from "expo-router";
 // import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import "./global.css";
@@ -23,6 +23,7 @@ Notifications.setNotificationHandler({
 const queryClient = new QueryClient();
 
 export default function RootLayout() {
+  const router = useRouter();
   // const MainStack = createNativeStackNavigator();
   // const UserStack = createNativeStackNavigator();
   const [fontsLoaded] = useFonts({
@@ -40,9 +41,25 @@ export default function RootLayout() {
     }
   }, [fontsLoaded]);
 
+  useEffect(() => {
+    function setupNotificationHandler() {
+      Notifications.addNotificationResponseReceivedListener((response) => {
+        const url = response.notification.request.content.data?.url;
+        if (url) {
+          router.push(url);
+        }
+      });
+    }
+
+    if (fontsLoaded) {
+      setupNotificationHandler();
+    }
+  }, [fontsLoaded]);
+
   if (!fontsLoaded) {
     return null;
   }
+
   return (
     <NotificationProvider>
       <AuthProvider>

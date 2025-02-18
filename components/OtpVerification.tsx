@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Text, View, TouchableOpacity, TextInput, Alert } from "react-native";
-import Ionicons from "@expo/vector-icons/Ionicons";
 import { Redirect, useLocalSearchParams, useRouter } from "expo-router";
 
-import * as Clipboard from "expo-clipboard";
 import { useAuth } from "@/components/Auth";
 
 import Feather from "@expo/vector-icons/Feather";
@@ -21,9 +19,9 @@ const OtpVerification = ({
   const { verifyYourOtp, isSignOtpLoading, user } = useAuth();
   const { id } = useLocalSearchParams();
   const router = useRouter();
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [otp, setOtp] = useState<string>("");
 
-  const inputRefs = useRef<(TextInput | null)[]>([]);
+  const inputRef = useRef<TextInput | null>(null);
 
   const [isOtpLoading, setIsOtpLoading] = useState<boolean>(false);
 
@@ -32,8 +30,8 @@ const OtpVerification = ({
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if (inputRefs.current[0]) {
-        inputRefs.current[0].focus();
+      if (inputRef.current) {
+        inputRef.current?.focus();
       }
     }, 100);
     return () => clearTimeout(timeout);
@@ -47,32 +45,12 @@ const OtpVerification = ({
     );
   };
 
-  const handleChange = async (value: string, index: number) => {
-    // const copiedText = await Clipboard.getStringAsync();
-    // if (copiedText && copiedText.length > 0 && copiedText.length < 7) {
-    //   setOtp(copiedText.trim().split(""));
-    // }
-
-    const newOtp = [...otp];
-    newOtp[index] = value;
-    setOtp(newOtp);
-    if (inputRefs.current[index + 1] && newOtp[index]) {
-      inputRefs.current[index + 1]?.focus();
-    }
-
-    if (inputRefs.current[index - 1] && !newOtp[index]) {
-      inputRefs.current[index - 1]?.focus();
-    }
-  };
-
-  const focusNextInput = (index: number) => {
-    if (inputRefs.current[index + 1]) {
-      inputRefs.current[index + 1]?.focus();
-    }
+  const handleChange = async (value: string) => {
+    setOtp(value);
   };
 
   const handleVerifyOtp = async () => {
-    const otpCode = otp.join("");
+    const otpCode = otp;
     const phone = countryCode + formData.phone;
 
     try {
@@ -96,30 +74,24 @@ const OtpVerification = ({
   };
 
   return (
-    <View className="mt-12">
-      <View className="w-full p-4">
+    <View className="mt-10">
+      <View className="w-full items-center justify-center p-4">
         <View className="items-center mb-8">
           <Text className="text-3xl font-rubik-bold text-center mt-4 mb-2">
             Veuillez saisir le code OTP envoyé à votre numero de téléphone.
           </Text>
 
           <View className="flex-row justify-between text-center gap-1 items-center w-full my-8">
-            {otp.map((digit, index) => (
-              <View
-                key={index}
-                className="w-14 h-14 bg-white rounded-full text-center items-center justify-center"
-              >
-                <TextInput
-                  value={digit}
-                  onChangeText={(value) => handleChange(value, index)}
-                  ref={(ref) => (inputRefs.current[index] = ref)}
-                  maxLength={1}
-                  keyboardType="numeric"
-                  className="w-14 h-14 border border-primary-300 rounded-full text-center font-rubik-bold text-2xl"
-                  onSubmitEditing={() => focusNextInput(index)}
-                />
-              </View>
-            ))}
+            <View className="w-full bg-white rounded-full text-center items-center justify-center">
+              <TextInput
+                value={otp}
+                onChangeText={(value) => handleChange(value)}
+                ref={inputRef}
+                keyboardType="numeric"
+                placeholder="_ _ _ _ _ _"
+                className="w-full text-center font-rubik-bold text-5xl"
+              />
+            </View>
           </View>
 
           <View className="flex-row items-center justify-center gap-4 w-full">
@@ -141,9 +113,9 @@ const OtpVerification = ({
       <TouchableOpacity
         activeOpacity={0.5}
         className="bg-primary-300 rounded-full py-4 px-8 mx-4"
-        disabled={otp.join("").length < 6}
+        disabled={otp.trim().length < 6}
         style={{
-          opacity: otp.join("").length < 6 ? 0.7 : 1,
+          opacity: otp.trim().length < 6 ? 0.7 : 1,
         }}
         onPress={handleVerifyOtp}
       >

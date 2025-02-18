@@ -5,14 +5,13 @@ import {
   SafeAreaView,
   Image,
   TouchableOpacity,
-  StatusBar,
   Platform,
 } from "react-native";
 import React, { useEffect } from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Redirect, useRouter } from "expo-router";
 import { useAuth } from "@/components/Auth";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { StatusBar } from "expo-status-bar";
 
 const SignUp = () => {
   const router = useRouter();
@@ -27,7 +26,7 @@ const SignUp = () => {
   return (
     <SafeAreaView className="flex-1 items-center justify-center">
       {Platform.OS === "android" && <View className="mt-4" />}
-      <StatusBar hidden={false} barStyle="dark-content" />
+      <StatusBar style="dark" />
       <View className="w-full px-6 py-4 border-b border-gray-300">
         <TouchableOpacity
           onPress={() => router.back()}
@@ -50,7 +49,7 @@ const SignUp = () => {
         <View className="flex-1 items-center justify-center">
           <View className="w-full items-center mb-4">
             <Image
-              source={require("@/assets/images/pmn/logo.png")}
+              source={require("@/assets/images/pmn/logosign.png")}
               className="w-80 h-32"
               resizeMode="cover"
             />
@@ -62,7 +61,7 @@ const SignUp = () => {
 
           {/* Heading */}
           <View className="w-full items-center my-6">
-            <Text className="text-5xl font-rubik-extrabold mb-2 text-center">
+            <Text className="text-4xl font-rubik-extrabold mb-2 text-center">
               Création de votre compte
             </Text>
             <Text className="text-xl font-rubik-light mb-2 text-center">

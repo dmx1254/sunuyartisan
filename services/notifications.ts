@@ -18,7 +18,10 @@ export async function sendPushNotification(
       sound: "default",
       title,
       body,
-      data: { someData: "goes here" },
+      data: {
+        screen: "notifications",
+        url: "(user)/notifications",
+      },
     };
 
     await fetch("https://exp.host/--/api/v2/push/send", {
@@ -35,3 +38,5 @@ export async function sendPushNotification(
     throw error;
   }
 }
+
+// Gestionnaire de notification lorsque l'app est en arrière-plan
