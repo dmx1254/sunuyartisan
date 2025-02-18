@@ -15,13 +15,12 @@ import {
 import { CountryPicker, CountryItem } from "react-native-country-codes-picker";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Link, Redirect, useRouter } from "expo-router";
+import { Link, useRouter } from "expo-router";
 
-import useStore from "../lib/store/manage";
 import { useAuth } from "@/components/Auth";
 import { Feather } from "@expo/vector-icons";
 
-const signIn = () => {
+const SignIn = () => {
   const { user, signIn, isSignInLoading } = useAuth();
   // const { isShowStartup, updateStartup } = useStore();
 
@@ -194,6 +193,7 @@ const signIn = () => {
                 <CountryPicker
                   lang="fr"
                   show={show}
+                  inputPlaceholder="Rechercher un pays"
                   style={{
                     modal: {
                       height: 400,
@@ -291,9 +291,6 @@ const signIn = () => {
                 <Text className="text-primary-300">Inscrivez-vous</Text>
               </Text>
             </Link>
-            {/* <TouchableOpacity onPress={() => updateStartup(false)}>
-              <Text>Reinitialiser</Text>
-            </TouchableOpacity> */}
           </KeyboardAvoidingView>
         </ScrollView>
       </SafeAreaView>
@@ -301,4 +298,4 @@ const signIn = () => {
   );
 };
 
-export default signIn;
+export default SignIn;

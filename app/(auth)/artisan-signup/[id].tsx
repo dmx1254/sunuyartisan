@@ -258,6 +258,7 @@ const ArtisanSignUp = () => {
                 <CountryPicker
                   lang="fr"
                   show={show}
+                  inputPlaceholder="Rechercher un pays"
                   style={{
                     modal: {
                       height: 400,
