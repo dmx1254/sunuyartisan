@@ -198,7 +198,7 @@ const ArtisanDetails = () => {
       {Platform.OS === "android" && <View className="mt-4" />}
       <TouchableOpacity
         onPress={() => router.back()}
-        className="z-20 rounded-full p-2 top-4"
+        className="z-20 rounded-full p-4"
       >
         <Ionicons name="arrow-back" size={26} color="#0061FF" />
       </TouchableOpacity>
@@ -251,7 +251,7 @@ const ArtisanDetails = () => {
           {distance && (
             <View className="flex-row items-center gap-2 py-2">
               <Ionicons name="location" size={18} color="#0061FF" />
-              <Text className="text-sm font-rubik-semibold text-primary-300">
+              <Text className="text-base font-rubik-semibold text-primary-300">
                 À {distance.toFixed(1)} km de vous
               </Text>
             </View>
@@ -270,7 +270,7 @@ const ArtisanDetails = () => {
             >
               <Image
                 source={chat}
-                className="w-6 h-6 object-cover"
+                className="w-8 h-8 object-cover"
                 resizeMode="cover"
               />
             </TouchableOpacity>
@@ -285,7 +285,7 @@ const ArtisanDetails = () => {
             >
               <Image
                 source={phone}
-                className="w-6 h-6 object-cover"
+                className="w-8 h-8 object-cover"
                 resizeMode="cover"
               />
             </TouchableOpacity>

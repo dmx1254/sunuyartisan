@@ -1,4 +1,3 @@
-
 import React from "react";
 import SignIn from "@/app/(auth)/sign-in";
 import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
@@ -64,6 +63,8 @@ jest.mock("@/components/Auth", () => ({
     user: {
       id: "test-user-id",
     },
+    signIn: jest.fn().mockReturnValue({ error: null, success: true }),
+    isSignInLoading: false,
   }),
 }));
 
@@ -108,10 +109,12 @@ describe("SignIn", () => {
       fireEvent.press(getByText("Se connecter"));
     });
 
-    // expect(mockSignin).toHaveBeenCalledWith({
-    //   phone: "123456789",
-    //   password: "password1254",
-    // });
+    // setTimeout(() => {
+    //   expect(mockSignin).toHaveBeenCalledWith({
+    //     phone: "123456789",
+    //     password: "password1254",
+    //   });
+    // }, 200);
   });
 
   it("Should handle failled sign in", async () => {
